@@ -1,228 +1,140 @@
 body{
-    
-    color:rgb(34, 40, 49);
-    flex-wrap:nowrap;
+    background-color: white;
+    font-family: "Inter", sans-serif;
 }
-
 #head{
-    display: flex;
-    height: 60vw;
+    
+    font-size: clamp(5px,5vw,20px);
     width: 100%;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: hidden;
-    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
-                url('data/bc3.webp') ;
-    background-size: cover;
-    background-position: center;
-    
-    color:rgb(34, 40, 49);
-    
-}
-
-#top_bar{
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 2vw;
-    margin: 1vw;
-    
-}
-#navigation{
-    display: flex;
-    width: 100vw;
-    height: 100%;
-    flex-direction: row;
-    margin-left: 1vw;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 3vw;
-
-}
-#small_logo{
-    height: 1vw;
-    width: 1vw;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-
-    width: 4vw;
-    height: 4vw;
-    margin: 2px;  
-}
-#corner1{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 50%;
-}
-
-#nav{
-    
-    font-size: clamp(13px,2vw,20px);
-    border: 3px solid  rgb(0, 173, 181);
-    border-radius: 25%;
-    padding-left: 0.8vw;
-    padding-right: 0.8vw;
-    padding-top: 0.2vw;
-    padding-bottom: 0.2vw;
-    transition: transform 0.5s ease-in-out;
-
-}
-
-#nav:hover{
-    transform: scale(1.1);
-    
-}
-#profile_photo{
-    display: flex;
-    justify-content: center;
-    border-radius: 50%;
-
-    width: 10vw;
-    height: 10vw;
-    align-self: center;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
-#profile_photo:hover{
-    transform: scale(1.1);
-}
-#intro{
-    display: flex;
-    flex-direction: column;
-    justify-items: flex-start;
-}
-#intro1{
-    font-size: clamp(14px, 3vw, 36px);
-    margin-bottom: 0px;
-}
-#intro2{
-    font-size: clamp(12px, 1.8vw, 24px);
-    margin-top: 0px;
-}
-.border{
-    border: 0px solid white;
-}
-#introbtn{
-    display: flex;
-    flex-direction: row;
-    width: 50vw ;
-   
-    justify-content: space-between;
-    align-items: center;
     height: 5vw;
-   
-    margin: 0%;
-}
-.btn {
-    width: clamp(200px,100vw,500px);
-    height: clamp(10px,5vw,35px);
-    margin: 8px;
-    position: relative;
-    font-size: clamp(8px,1vw,17px);
-    background-color: rgb(0, 173, 181);
-    padding: 0px;
-    color: white;
-    font-weight: bold;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    text-align: center;
-}
-
-/* Border Animation */
-.btn::before {
-    content: "";
-    align-items: center;
-    justify-content: center;
-    position:absolute;
-    inset: 0;
-    border: 3px solid #222831;;
-    border-radius: 8px;
-    transform: scale(1.1);
-    opacity: 0;
-    transition: all 0.4s ease-in-out;
-}
-
-.btn:hover::before {
-    transform: scale(1);
-    opacity: 1;
-}
-
-.btn:hover {
-    background-color: #222831;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.btn:active {
-    transform: scale(1.0);
-}
-
-#works{
-    width: 95vw;
-    height: 24%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
-}
-.bibi{
-    color: white;
-    font-size: clamp(10px,1.5vw,20px);
-    display: flex;
-    flex-direction: column;
-    width: 15%;
-    height: 15vw;
-    border: 1px solid white;
+    
     overflow: hidden;
-
-    background-position:top;
-    background-size: cover;
 }
-.material-symbols-outlined{
- margin-right: 1vw;
+#logo{
+    margin-left: 4%;
 }
-#infoservice{
+#nav-links{
+    width: 50%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 5vw;
+
+    
+}
+.nav{
+    color: black;
+    text-decoration: none;
+    
+    font-size: clamp(5px,5vw,20px);
+    
+}
+#btnhireme{
+    width: 14%;
+    height: 2.5vw;
+    background-color: black;
+    color: white;
+    font-size: clamp(5px,5vw,18px);
+    border-radius: 5px;
+
+}
+#body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
     width: 100%;
-    height: 175vw;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)) ,url(data/longbc2.webp);
+    height: 40vw;
+    
+}
+#firstline{
+    margin-left: 7vw;
+    font-size: clamp(20px,12vw,50px);
+    text-decoration: solid;
+}
+#secondline{
+    font-weight: 540;
+    -webkit-text-stroke: 1px black; 
+    margin-left: 18vw;
+    font-size: clamp(20px,20vw,75px);
+    text-decoration: solid;
+    color: rgb(124, 0, 0);
+    
+    margin-top: 0.1px;
+}
+#thirdline{
+    margin-left: 7vw;
+    font-size: clamp(20px,20vw,70px);
+    text-decoration: solid;
+}
+#works{
+    font-size: clamp(5px,5vw,20px);
+    margin-top: 0px 0;
+    padding: 0px;
+    margin-left: 5vw;
+}
+#firstimg{
+    
+    margin: 2vw;
+    width: 40%;
+    height: 80%;
+    background-image: url(first.jpg);
     background-position: center;
     background-size: cover;
-    justify-content: flex-start;
-    align-items: center;
+    
 }
-.descinfo{
-    width: 100%;
-    height: 15vw;
-    border: 1px solid white;
+#introline{
+    padding: 0px 0;
+    margin: 0px 0;
+    margin-left: 5vw;
+    font-weight: 520;
+    
     display: flex;
     flex-direction: row;
+    text-align: center;
+    width: 65%;
+    height: 11vw;
+    font-size: clamp(20px,20vw,75px);
+}
+#mainintro{
+    color: rgb(124, 0, 0);
+    text-decoration: underline;
+}
+#secondbody{
+    
+    width: 100%;
+    height: 30vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-between;   
-    padding: 10vw;
+    
 }
-.descinfo img{
-    width: 20vw;
-    height: 18vw;
+#secondbodytext{
+    font-size: clamp(10px,5vw,20px);
+    width: 40%;
+    height: 50%;
+    margin-left: 6vw;
 }
-.descinfo p{
-    margin: 30px;
-    text-align:justify;
-    font-size: clamp(0.5vw,3vw,1.2vw);
+#secondimage{
+    width: 30%;
+    height: 60%;
+    
+    margin:4vw ;
+    background-image: url(second.jpg);
+    background-position: center;
+    background-size: cover;
 }
+
+
+
+
+/*This is copied*/
 #Contact_Me{
     display: flex;
     flex-direction: column;
@@ -245,11 +157,13 @@ body{
 }
 #Email_contact{
     font-size: clamp(4px,8vw,16px);
-
+ 
     display: flex;
-    flex-direction: row;
-    width: 50vw;
-    justify-content: space-around;
+    flex-direction: column;
+    width: 100vw;
+    height: 10vw;
+    justify-content: flex-start;
+    
     align-items: center;
 
 
