@@ -1,24 +1,47 @@
+body{
+    
+    color:rgb(34, 40, 49);
+    flex-wrap:nowrap;
+}
+
 #head{
     display: flex;
-    border: 2px solid black;
-    border-color: black;
-    height: 50vp;
+    height: 60vw;
     width: 100%;
     text-align: center;
     flex-direction: column;
-    background-color: aliceblue;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     overflow: hidden;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+                url('data/bc3.webp') ;
+    background-size: cover;
+    background-position: center;
+    
+    color:rgb(34, 40, 49);
+    
+}
+
+#top_bar{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2vw;
+    margin: 1vw;
+    
 }
 #navigation{
     display: flex;
-    width: 50%;
+    width: 100vw;
     height: 100%;
     flex-direction: row;
-    justify-content: space-around;
+    margin-left: 1vw;
+    justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
+    padding-right: 3vw;
+
 }
 #small_logo{
     height: 1vw;
@@ -27,40 +50,211 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
-    border: 1px solid black;
+
     width: 4vw;
     height: 4vw;
     margin: 2px;  
 }
-#top_bar{
-    width: 100%;
-    height: 10vh;
+#corner1{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    }
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+}
+
 #nav{
-    margin: 2px;
-    width: 10%;
-    font-size: 1.4vw;
+    
+    font-size: clamp(13px,2vw,20px);
+    border: 3px solid  rgb(0, 173, 181);
+    border-radius: 25%;
+    padding-left: 0.8vw;
+    padding-right: 0.8vw;
+    padding-top: 0.2vw;
+    padding-bottom: 0.2vw;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+#nav:hover{
+    transform: scale(1.1);
     
 }
 #profile_photo{
     display: flex;
     justify-content: center;
-border-radius: 50%;
-border: 1px solid black;
-width: 10vw;
-height: 10vw;
-align-self: center;
-overflow: hidden;
-transition: transform 0.3s ease-in-out;
-}
+    border-radius: 50%;
 
+    width: 10vw;
+    height: 10vw;
+    align-self: center;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
 #profile_photo:hover{
     transform: scale(1.1);
 }
-#name{
-    transition: transform 0.3s ease-in-out;
+#intro{
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
+#intro1{
+    font-size: clamp(14px, 3vw, 36px);
+    margin-bottom: 0px;
+}
+#intro2{
+    font-size: clamp(12px, 1.8vw, 24px);
+    margin-top: 0px;
+}
+.border{
+    border: 0px solid white;
+}
+#introbtn{
+    display: flex;
+    flex-direction: row;
+    width: 50vw ;
+   
+    justify-content: space-between;
+    align-items: center;
+    height: 5vw;
+   
+    margin: 0%;
+}
+.btn {
+    width: clamp(200px,100vw,500px);
+    height: clamp(10px,5vw,35px);
+    margin: 8px;
+    position: relative;
+    font-size: clamp(8px,1vw,17px);
+    background-color: rgb(0, 173, 181);
+    padding: 0px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 
+/* Border Animation */
+.btn::before {
+    content: "";
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    inset: 0;
+    border: 3px solid #222831;;
+    border-radius: 8px;
+    transform: scale(1.1);
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn:hover::before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.btn:hover {
+    background-color: #222831;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: scale(1.0);
+}
+
+#works{
+    width: 95vw;
+    height: 24%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.bibi{
+    color: white;
+    font-size: clamp(10px,1.5vw,20px);
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 15vw;
+    border: 1px solid white;
+    overflow: hidden;
+
+    background-position:top;
+    background-size: cover;
+}
+.material-symbols-outlined{
+ margin-right: 1vw;
+}
+#infoservice{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 175vw;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)) ,url(data/longbc2.webp);
+    background-position: center;
+    background-size: cover;
+    justify-content: flex-start;
+    align-items: center;
+}
+.descinfo{
+    width: 100%;
+    height: 15vw;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;   
+    padding: 10vw;
+}
+.descinfo img{
+    width: 20vw;
+    height: 18vw;
+}
+.descinfo p{
+    margin: 30px;
+    text-align:justify;
+    font-size: clamp(0.5vw,3vw,1.2vw);
+}
+#Contact_Me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+#Contact{
+    text-decoration: underline;
+
+}
+#Logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%;
+    height: 12vh;
+    font-size: clamp(4px,8vw,16px);
+    
+
+}
+#Email_contact{
+    font-size: clamp(4px,8vw,16px);
+
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
